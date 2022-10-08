@@ -3,12 +3,100 @@ Content-Type: application/json
 
 {
   "title": "Hello World",
-  "completed": "False",
+  "completed": false,
   "order": 1
 }
 
 ###
-# Test your endpoints
+POST http://localhost:8080/todos/
+Content-Type: application/json
+
+{
+  "title": "HALLO WELT",
+  "completed": false,
+  "order": 2
+}
+###
+POST http://localhost:8080/todos/
+Content-Type: application/json
+
+{
+  "title": "Movies",
+  "completed": false,
+  "order": 3
+}
+###
+POST http://localhost:8080/tags/
+Content-Type: application/json
+
+{
+  "title": "Tag_1"
+}
+###
+POST http://localhost:8080/tags/
+Content-Type: application/json
+
+{
+  "title": "Tag_2"
+}
+###
+POST http://localhost:8080/tags/
+Content-Type: application/json
+
+{
+  "title": "Tag_3"
+}
+###
+POST http://localhost:8080/tags/
+Content-Type: application/json
+
+{
+  "title": "Tag_4"
+}
+###
+POST http://localhost:8080/tags/
+Content-Type: application/json
+
+{
+  "title": "Tag_5"
+}
+###
+
+POST http://localhost:8080/todos/1/tags/
+Content-Type: application/json
+
+{
+  "id": "1"
+}
+###
+POST http://localhost:8080/todos/1/tags/
+Content-Type: application/json
+
+{
+  "id": "2"
+}
+###
+POST http://localhost:8080/todos/2/tags/
+Content-Type: application/json
+
+{
+  "id": "3"
+}
+###
+POST http://localhost:8080/todos/2/tags/
+Content-Type: application/json
+
+{
+  "id": "4"
+}
+###
+POST http://localhost:8080/todos/4/tags/
+Content-Type: application/json
+
+{
+  "id": "5"
+}
+###
 
 GET http://localhost:8080/todos/
 Accept: application/json
@@ -25,4 +113,13 @@ Accept: application/json
 GET http://127.0.0.1:8080/tags/1
 Accept: application/json
 
+###
+PATCH http://127.0.0.1:8080/todos/1
+Content-Type: application/json
+
+{
+  "title": "My task",
+  "completed": true,
+  "order": 10
+}
 ###
