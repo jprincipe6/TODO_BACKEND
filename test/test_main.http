@@ -8,12 +8,6 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:8080/todos/2
-Content-Type: application/x-www-form-urlencoded
-
-title='Hello world'&completed=False&order=0
-
-###
 # Test your endpoints
 
 GET http://localhost:8080/todos/
