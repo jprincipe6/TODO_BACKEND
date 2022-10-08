@@ -138,7 +138,7 @@ class Tags:
         if Tools.isEmpty(todos) is True:
             tagFinal['todos'] = []
         else:
-            tag['todos'] = todosFinal
+            tagFinal['todos'] = todosFinal
         return Tools.finalResponse(tagFinal)
 
     async def update_tag(request):
