@@ -4,7 +4,7 @@ import aiohttp_cors
 from aiohttp import web
 from fastapi.encoders import jsonable_encoder
 
-from db import engine, session
+from db import session
 from repositories import TodoRepo, TagRepo, Relation
 
 def get_all_todos(request):
