@@ -199,7 +199,6 @@ class RelationT:
         id_todo = int(request.match_info['id'])
         data = await request.json()
         id_tag = data['id']
-        print(data['id'])
         todo = TodoRepo.fetch_by_id(session, id_todo)
         exists = TodoRepo.fecth_is_exists(session, id_todo)
         exists_tag = TagRepo.fecth_is_exists(session, id_tag)
