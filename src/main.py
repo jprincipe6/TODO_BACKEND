@@ -4,7 +4,6 @@ import aiohttp_cors
 from aiohttp import web
 from fastapi.encoders import jsonable_encoder
 
-import models as models
 from db import engine, session
 from repositories import TodoRepo, TagRepo, Relation
 
