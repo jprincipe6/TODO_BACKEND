@@ -1,9 +1,11 @@
-import sqlalchemy
 from sqlalchemy import func
 from sqlalchemy.orm import Session
 
 import models
 
+
+# Repositories: contains some reusable functions to
+#               interact with the data in the database
 
 class TodoRepo:
 
@@ -42,7 +44,6 @@ class TodoRepo:
         return db.query(models.Todos).offset(skip).limit(limit).all()
 
     def fetch_get_last_key(db: Session,):
-        # session.query(func.count(Congress.id)).scalar()
         data = db.query(func.count(models.Todos.id)).scalar()
         return data
 
@@ -73,8 +74,6 @@ class TagRepo:
     def fetch_by_id(db: Session, _id: int):
         return db.query(models.Tags).filter(models.Tags.id == _id).first()
 
-    # def fetch_by_name(db: Session, name: str):
-        # return db.query(models.Store).filter(models.Store.name == name).first()
     def fetch_get_url(db: Session, _id):
         return db.query(models.Tags.url).filter(models.Todos.id == _id)
 
@@ -87,7 +86,6 @@ class TagRepo:
         ).scalar()
         return exists
     def fetch_get_last_key(db: Session,):
-        # session.query(func.count(Congress.id)).scalar()
         data = db.query(func.count(models.Tags.id)).scalar()
         return data
 
