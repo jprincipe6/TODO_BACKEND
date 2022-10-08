@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS todos(
     id INT PRIMARY KEY NOT NULL,
     title TEXT NOT NULL,
     completed BOOLEAN,
-    orderT INT,
+    order INT,
 	url TEXT
 )
 
