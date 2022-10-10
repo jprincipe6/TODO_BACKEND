@@ -1,22 +1,22 @@
 Create TABLE MiniServer;
 
-DROP TABLE relation;
-DROP TABLE todos;
-DROP TABLE tags;
+DROP TABLE IF EXISTS relation;
+DROP TABLE IF EXISTS todos;
+DROP TABLE IF EXISTS tags;
 
 CREATE TABLE IF NOT EXISTS todos(
     id INT PRIMARY KEY NOT NULL,
     title TEXT NOT NULL,
     completed BOOLEAN,
-    order INT,
+    "order" INT,
 	url TEXT
-)
+);
 
 CREATE TABLE IF NOT EXISTS tags(
     id INT PRIMARY KEY NOT NULL,
     title TEXT NOT NULL,
 	url TEXT
-)
+);
 
 
  CREATE TABLE IF NOT EXISTS relation(
